@@ -13,7 +13,7 @@ from ogb.nodeproppred import PygNodePropPredDataset, Evaluator
 #Prediction task: The task  is to predict the primary categories of the arXiv papers, which is formulated as a 40-class classification problem.
 #Dataset splitting: The general setting is that the ML models are trained on existing papers and then used to predict the subject areas of newly-published papers.
 #   Specifically, we propose to train on papers published until 2017, validate on those published in 2018, and test on those published since 2019.
-from torch_geometric.data import NeighborSampler, GraphSAINTRandomWalkSampler
+from torch_geometric.loader import NeighborSampler, GraphSAINTRandomWalkSampler
 from torch_geometric.data import Data
 import argparse
 from utils.logger import Logger
